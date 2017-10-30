@@ -8,6 +8,9 @@ public class playerMove : MonoBehaviour {
 	public bool facingRight=true;
 	public int playerJumpPower=160;
 	private float moveX;
+	bool onGround=false;
+
+
 	// Use this for initialization
 	void Start () {
 		
@@ -43,6 +46,7 @@ public class playerMove : MonoBehaviour {
 	{
 		GetComponent<Rigidbody2D> ().AddForce (Vector2.up * playerJumpPower);
 	}
+		
 	void FlipPlayer()
 	{
 		facingRight =! facingRight;
